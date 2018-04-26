@@ -1,0 +1,45 @@
+.otherStuff{
+margin: 1em;
+
+}
+img{
+    width: 100%;
+}
+#other {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px)  {
+  #other {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (min-width: 1000px)  {
+  #other {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+.textBG {
+    background-color: black;
+    padding: 2em;
+}
+
+h1, h3, h4, p{
+    color: white;
+}
+
+.datetime{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+a{
+margin: auto;
+color: yellow;
+}
