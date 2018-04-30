@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
+    <link rel="stylesheet" href="CSS/style.css"> </head>
 
 <body>
+    <header class="appbar">
+        <svg class="menuIcon" viewBox="0 0 100 100">
+            <rect class="myrect" x="10" y="10" width="80" height="10" rx="5" ry="5" />
+            <rect class="myrect" x="10" y="30" width="80" height="10" rx="5" ry="5" />
+            <rect class="myrect" x="10" y="50" width="80" height="10" rx="5" ry="5" /> </svg> <img class="logo" src="imgs/logo.png">
+        <h1 class="headline">MOVIES</h1> <img class="number" src="imgs/number.png" ;> </header>
+    <aside class="menu hidden">
+        <ul> </ul>
+    </aside>
     <h2> Huset</h2>
     <section id="other">
         <template id="otherTemp">
-        <article class="otherStuff">
-
-           <h5 class="genre">
+            <article class="otherStuff">
+              <img src="" alt="">
+                <div class="textBG">
+                    <h1> Title </h1>
+                       <h5 class="genre">
                 genre
             </h5>
-            <img src="" alt="">
-            <div class="textBG">
-            <h1> Title </h1>
-<div class="datetime">
-            <h4 class="date">
+                    <div class="datetime">
+                        <h4 class="date">
                 Date
             </h4>
-              <h4 class="time">
+                        <h4 class="time">
                  <span>kl. </span>
                   Time
-              </h4>
-              </div>
-               <h3 class="price">
+              </h4> </div>
+                    <h3 class="price">
                 kr. <span> Price</span>
             </h3>
-
-            <p> <a class="readmore" href="">
-              Read more about event
-               </a>
-            </p>
-</div>
-        </article>
-</template>
-
-
-
+                    <p> <a class="readmore" href="">
+              Read more
+               </a> </p>
+                </div>
+            </article>
+        </template>
     </section>
     <script src="JS/main.js"></script>
+    <script src="JS/menu.js"></script>
 </body>
 
 </html>

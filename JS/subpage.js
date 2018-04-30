@@ -1,7 +1,7 @@
 let urlParams = new URLSearchParams(window.location.search);
 let id = urlParams.get("id");
 
-fetch("http://tomasgazi.com/wordpress/wp-json/wp/v2/huset/" +id)
+fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset/" +id)
 .then(e=>e.json())
 .then(showDetails)
 
