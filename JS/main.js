@@ -5,7 +5,16 @@
 
     function fetchOther() {
         lookingForData = true;
-        fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset?_embed&categories=6&per_page=2&page=" + page).then(e => e.json()).then(showOther)
+
+        let urlParams = new URLSearchParams(window.location.search);
+
+        let catid = urlParams.get("category");
+        let parentid = urlParams.get("parent");
+        console.log(parentid);
+
+        fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset?_embed&per_page=2&page=" + page + "&categories=" + catid)
+            .then(e => e.json())
+            .then(showOther)
     }
 
     function showOther(data) {

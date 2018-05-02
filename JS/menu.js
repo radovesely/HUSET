@@ -13,9 +13,9 @@ window.addEventListener('load',()=>{
     menu.classList.toggle("hidden");
   }
 
-  fetch("https://t7.kea-alt-del.dk/wp-json/wp/v2/categories")
-    .then(e=>e.json())
-    .then(buildMenu)
+    fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/categories")
+        .then(e => e.json())
+        .then(buildMenu)
 
   function buildMenu(data){
     let parentElement = document.querySelector(".menu ul");

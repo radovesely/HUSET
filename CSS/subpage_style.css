@@ -1,0 +1,14 @@
+.date {
+    width: 50%;
+
+}
+
+.price {
+    float: right;
+    width: 50%;
+    text-align: right;
+
+}
+.time {
+    float: left;
+}
