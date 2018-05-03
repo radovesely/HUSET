@@ -3,14 +3,17 @@
     let page = 1;
     let lookingForData = false;
 
-    function fetchOther() {
+   function fetchOther() {
         lookingForData = true;
 
         let urlParams = new URLSearchParams(window.location.search);
 
         let catid = urlParams.get("category");
-        let parentid = urlParams.get("parent");
-        console.log(parentid);
+    //    let parentid = urlParams.get("parent");
+        if(!catid){
+            catid=6;
+        }
+       console.log(catid);
 
         fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/huset?_embed&per_page=2&page=" + page + "&categories=" + catid)
             .then(e => e.json())
@@ -51,7 +54,27 @@
             fetchOther();
         }
     }, 100)
+function onReady(callback) {
+        let intervalID = window.setInterval(checkReady, 1000);
 
+        function checkReady() {
+            if (document.getElementsByTagName('body')[0] !== undefined) {
+                window.clearInterval(intervalID);
+                callback.call(this);
+            }
+        }
+    }
+
+ var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("huset_svg").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
     function bottomVisible() {
         const scrollY = window.scrollY
         const visible = document.documentElement.clientHeight
@@ -59,3 +82,6 @@
         const bottomOfPage = visible + scrollY >= pageHeight
         return bottomOfPage || pageHeight < visible
     }
+
+
+

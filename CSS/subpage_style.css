@@ -1,14 +1,20 @@
-.date {
-    width: 50%;
-
+.date , .price , .time
+{
+    text-align: center;
+    color: black;
+    font-weight: 700;
 }
 
-.price {
-    float: right;
-    width: 50%;
-    text-align: right;
 
+.datetimeprice {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    float: none;
+    background: #fff;
 }
-.time {
-    float: left;
+
+p.desc {
+    line-height: 1.5;
+    font-weight: 200;
 }
+

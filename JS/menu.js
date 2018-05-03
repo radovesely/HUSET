@@ -13,25 +13,32 @@ window.addEventListener('load',()=>{
     menu.classList.toggle("hidden");
   }
 
-    fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/categories")
+    fetch("http://mihaelsandro.com/wordpress/wp-json/wp/v2/categories?per_page=100")
         .then(e => e.json())
         .then(buildMenu)
 
-  function buildMenu(data){
-    let parentElement = document.querySelector(".menu ul");
-    data.forEach(item => {
-      console.log(item);
-      let li = document.createElement("li");
-      let a = document.createElement("a");
-      a.textContent = item.name;
-      a.href="index.html?category="+item.id;
+    function buildMenu(data) {
+        let parentElement = document.querySelector(".menu ul");
+        data.forEach(item => {
+            if(item.parent==6){
+                let li = document.createElement("li");
+                let a = document.createElement("a");
+                a.textContent = item.name;
+                a.href = "index.html?category=" + item.id;
 
-      li.appendChild(a);
-      parentElement.appendChild(li);
+               /* if (item.parent == 8) {
+                    a.textContent = item.name;
+                    a.href = "index.html?category" + item.id;
+                } else {
+                    a.textContent.remove;
+                }
+    */
+                li.appendChild(a);
+                parentElement.appendChild(li);
+            }
 
-
-    })
-  }
+        })
+    }
 
 
 
@@ -42,4 +49,6 @@ window.addEventListener('load',()=>{
 
 
 });
+
+
 

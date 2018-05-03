@@ -1,7 +1,9 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
-    background-image: url(../imgs/pattern.png);
-    background-size: 250px;
+}
+
+#huset_svg {
+    width: 100%;
 }
 
 #subpage {
@@ -26,18 +28,11 @@ body {
     margin-top: 1em;
 }
 
-img.number {
-    width: 40px;
-    float: right;
-    margin-left: 40px;
-    margin-top: -40px;
-}
 
 .otherStuff {
     margin: 1em;
     margin-top: 25%;
     background: black;
-    box-shadow: 1px 1px 10px grey;
 }
 
 .appbar {
@@ -80,6 +75,8 @@ a.readmore {
     font-size: 12px;
     float: right;
     margin-top: -50px;
+    margin-left: 100px;
+    margin-bottom: 20px;
     font-weight: 700;
 }
 a.readmore:hover {
@@ -253,4 +250,22 @@ h1.headline {
 
 .subappbar {
     background: transparent;
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
 }
